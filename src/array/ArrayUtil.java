@@ -177,4 +177,18 @@ public class ArrayUtil {
         arr = tempArr;
         return arr;
     }
+
+    /**
+     * Utility method to find the missing number in an array of distinct consecutive numbers.
+     * @param arr Input array
+     * @return Integer value
+     */
+    public static int findMissingNumber(int[] arr) {
+        int n = arr.length + 1;
+        int sum = n * (n + 1) / 2;
+        for (int val : arr) {
+            sum -= val;
+        }
+        return sum;
+    }
 }

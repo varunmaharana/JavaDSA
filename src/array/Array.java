@@ -26,5 +26,7 @@ public class Array {
         arr2 = ArrayUtil.resize(arr2, arr2.length * 2);
         ArrayUtil.printIntArray(arr2);
 
+        int[] arr3 = {1, 2, 3, 6};
+        System.out.println("Missing number: " + ArrayUtil.findMissingNumber(arr3));
     }
 }
