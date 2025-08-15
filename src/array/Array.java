@@ -10,6 +10,7 @@ public class Array {
         ArrayUtil.printIntArray(arr1);
         System.out.println("Minimum Value: " + ArrayUtil.minimumValue(arr1));
         System.out.println("Maximum Value: " + ArrayUtil.maximumValue(arr1));
+        System.out.println("Second Minimum Value: " + ArrayUtil.secondMinimumValue(arr1));
         System.out.println("Second Maximum Value: " + ArrayUtil.secondMaximumValue(arr1));
     }
 }

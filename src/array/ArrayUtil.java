@@ -121,4 +121,25 @@ public class ArrayUtil {
 
         return secondMax;
     }
+
+    /**
+     * Utility method to find the second minimum value in an integer array.
+     * @param arr
+     * @return
+     */
+    public static int secondMinimumValue(int[] arr) {
+        int min = Integer.MAX_VALUE;
+        int secondMin = Integer.MAX_VALUE;
+
+        for (int i : arr) {
+            if (i < min) {
+                secondMin = min;
+                min = i;
+            } else if (i < secondMin && i != min) {
+                secondMin = i;
+            }
+        }
+
+        return secondMin;
+    }
 }
