@@ -12,5 +12,16 @@ public class Array {
         System.out.println("Maximum Value: " + ArrayUtil.maximumValue(arr1));
         System.out.println("Second Minimum Value: " + ArrayUtil.secondMinimumValue(arr1));
         System.out.println("Second Maximum Value: " + ArrayUtil.secondMaximumValue(arr1));
+
+        System.out.println();
+
+        int[] arrWithZeros = { 1, 0, 2, 0, 3, 4, 0, 5};
+        ArrayUtil.printIntArray(arrWithZeros);
+        ArrayUtil.moveZerosToEnd(arrWithZeros);
+        System.out.print("Moved Zeros to End: ");
+        ArrayUtil.printIntArray(arrWithZeros);
+        System.out.println();
+
+
     }
 }

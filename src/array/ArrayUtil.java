@@ -7,7 +7,7 @@ public class ArrayUtil {
 
     /**
      * Utility method to print an integer array.
-     * @param arr
+     * @param arr Input Array
      */
     public static void printIntArray(int[] arr) {
         int n = arr.length;
@@ -25,7 +25,7 @@ public class ArrayUtil {
 
     /**
      * Utility method to remove even integers from an array.
-     * @param arr
+     * @param arr Input Array
      * @return
      */
     public static int[] removeEvenInt(int[] arr) {
@@ -52,9 +52,9 @@ public class ArrayUtil {
     }
     /**
      * Utility method to reverse an integer array in the given range
-     * @param arr
-     * @param start
-     * @param end
+     * @param arr Input Array
+     * @param start Start Index
+     * @param end End Index
      */
     public static void reverse(int[] arr, int start, int end) {
         while (start < end) {
@@ -69,7 +69,7 @@ public class ArrayUtil {
 
     /**
      * Utility method to find the minimum value in an integer array.
-     * @param arr
+     * @param arr Input Array
      * @return
      */
     public static int minimumValue(int[] arr) {
@@ -86,7 +86,7 @@ public class ArrayUtil {
     
     /**
      * Utility method to find the maximum value in an integer array.
-     * @param arr
+     * @param arr Input Array
      * @return
      */
     public static int maximumValue(int[] arr) {
@@ -103,7 +103,7 @@ public class ArrayUtil {
 
     /**
      * Utility method to find the second maximum value in an integer array.
-     * @param arr
+     * @param arr Input Array
      * @return
      */
     public static int secondMaximumValue(int[] arr) {
@@ -124,7 +124,7 @@ public class ArrayUtil {
 
     /**
      * Utility method to find the second minimum value in an integer array.
-     * @param arr
+     * @param arr Input Array
      * @return
      */
     public static int secondMinimumValue(int[] arr) {
@@ -141,5 +141,25 @@ public class ArrayUtil {
         }
 
         return secondMin;
+    }
+
+    /**
+     * Utility method to move zeros to end of an array without changing sequence of non-zero elements.
+     * @param arr Input Array
+     */
+    public static void moveZerosToEnd(int[] arr) {
+        int n = arr.length;
+        int j = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] != 0 && arr[j] == 0) {
+                // Swap zero with non-zero value
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+            if (arr[j] != 0) {
+                j++;
+            }
+        }
     }
 }
