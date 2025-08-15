@@ -192,6 +192,11 @@ public class ArrayUtil {
         return sum;
     }
 
+    /**
+     * Utility method to find of the given string is palindrome or not.
+     * @param str Input String
+     * @return Boolean value
+     */
     public static boolean isPalindromeString(String str) {
         char[] charArr = str.toCharArray();
         int start = 0;
