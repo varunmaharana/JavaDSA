@@ -162,4 +162,19 @@ public class ArrayUtil {
             }
         }
     }
+
+    /**
+     * Utility method to change the size of an array.
+     * @param arr Input array
+     * @param capacity New length of the array
+     * @return Integer array
+     */
+    public static int[] resize(int[] arr, int capacity) {
+        int[] tempArr = new int[capacity];
+        for (int i = 0; i < arr.length; i++) {
+            tempArr[i] = arr[i];
+        }
+        arr = tempArr;
+        return arr;
+    }
 }

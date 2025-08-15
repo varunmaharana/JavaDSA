@@ -22,6 +22,9 @@ public class Array {
         ArrayUtil.printIntArray(arrWithZeros);
         System.out.println();
 
+        int[] arr2 = {1, 2, 3, 4};
+        arr2 = ArrayUtil.resize(arr2, arr2.length * 2);
+        ArrayUtil.printIntArray(arr2);
 
     }
 }
