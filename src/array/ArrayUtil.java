@@ -107,8 +107,18 @@ public class ArrayUtil {
      * @return
      */
     public static int secondMaximumValue(int[] arr) {
+        int max = Integer.MIN_VALUE;
+        int secondMax = Integer.MIN_VALUE;
 
+        for (int i : arr) {
+            if (i > max) {
+                secondMax = max;
+                max = i;
+            } else if (i > secondMax && i != max) {
+                secondMax = i;
+            }
+        }
 
-        
+        return secondMax;
     }
 }
