@@ -191,4 +191,18 @@ public class ArrayUtil {
         }
         return sum;
     }
+
+    public static boolean isPalindromeString(String str) {
+        char[] charArr = str.toCharArray();
+        int start = 0;
+        int end = charArr.length - 1;
+        for (int i = 0; i < charArr.length; i++) {
+            if (charArr[start] != charArr[end]) {
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
 }

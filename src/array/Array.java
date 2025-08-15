@@ -28,5 +28,8 @@ public class Array {
 
         int[] arr3 = {1, 2, 3, 6};
         System.out.println("Missing number: " + ArrayUtil.findMissingNumber(arr3));
+
+        String str = "nitin";
+        System.out.println("Is " + str + " palindrome? => " + ArrayUtil.isPalindromeString(str));
     }
 }
